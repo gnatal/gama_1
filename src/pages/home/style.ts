@@ -1,5 +1,12 @@
 import styled from 'styled-components'
 
+export const TitleBox = styled.div`
+  width: 80%;
+  margin: 10px auto;
+
+  text-align: center;
+`
+
 export const HomeContainer = styled.div`
   width: 80%;
   margin: auto;
@@ -27,6 +34,8 @@ export const CategoriesBox = styled.div`
 export const Category = styled.p`
   border: solid 1px;
   padding: 5px;
+  font-weight: bold;
+  background: whitesmoke;
 `
 
 export const JokeCard = styled.div`

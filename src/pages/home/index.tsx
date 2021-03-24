@@ -4,7 +4,7 @@ import api from '../../service/api'
 import {
     CategoriesBox, Category, HomeContainer, JokeCard,
     JokeCardImage, SearchBoxLabel, JokeCardText, SearchBox,
-    SearchBoxButton, SearchBoxInput
+    SearchBoxButton, SearchBoxInput, TitleBox
 } from './style'
 
 
@@ -58,7 +58,15 @@ const Home: React.FC = () => {
 
     return (
         <HomeContainer>
-            Clique na categoria para receber uma piada
+            <TitleBox>
+                <h1>
+                    The chucknorris joke app
+                </h1>
+            </TitleBox>
+            <TitleBox>
+                The chucknorris joke app
+                clique na categoria para receber uma piada
+            </TitleBox>
             <div className="categories">
                 <CategoriesBox>
                     {categoriesJoke.map((joke, index) => (
@@ -66,6 +74,7 @@ const Home: React.FC = () => {
                     ))}
                 </CategoriesBox>
             </div>
+
             <JokeCard>
                 <JokeCardImage src={categorySelected?.icon_url} alt={categorySelected?.value} />
                 <JokeCardText>{categorySelected?.value}</JokeCardText>
